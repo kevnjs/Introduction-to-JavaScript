@@ -256,7 +256,7 @@ console.log(multiply(2, 2));
   */
   
   function annoyingSong(number){
-    for (i = number; i >= 1; i--) {
+    for (let i = number; i >= 1; i--) {
       return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
     }
   }
@@ -309,8 +309,8 @@ console.log(multiply(2, 2));
   let count = 0;
   function vowelCounter(word) {
     let word2 = word.toLowerCase();
-    for (i = 0; i < word2.length; i++) {
-      for (v = 0; v < vowels.length; v++ ) {
+    for (let i = 0; i < word2.length; i++) {
+      for (let v = 0; v < vowels.length; v++ ) {
         if (word2[i] === vowels[v]) {
           count++;
         }
