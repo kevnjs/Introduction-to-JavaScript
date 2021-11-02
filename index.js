@@ -160,10 +160,55 @@ console.log(multiply(2, 2));
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
   */
-  
+  let computerChoice = Math.floor(Math.random()* 3);
   function game(user, computer){
-    /*add your code here*/
-  }
+    if (computer === 0) {
+      computer = 'rock';
+    } else if (computer === 1) {
+      computer = 'scissors';
+    } else if  (computerChoice === 2) {
+      computer = 'paper';
+    }
+    if (user === 'paper') {
+      if (computer === 'paper') {
+        return "it's a tie";
+      } else if (computer === 'rock') {
+        return "you win!";
+      } else if (computer === 'scissors') {
+        return "you lose!";
+      }
+      
+    }
+    if (user === 'rock') {
+      if (computer === 'paper') {
+        return "you lose!";
+      } else if (computer === 'rock') {
+        return "it's a tie";
+      } else if (computer === 'scissors') {
+        return "you win!";
+      }
+    }
+    if (user === 'paper') {
+      if (computer === 'paper') {
+      return "it's a tie";
+      } else if (computer === 'rock') {
+      return "you win!";
+      } else if (computer === 'scissors') {
+      return "you lose!";
+      }
+    }
+    if (user === 'scissors') {
+      if (computer === 'paper') {
+      return "you win!";
+      } else if (computer === 'rock') {
+      return "you lose!";
+      } else if (computer === 'scissors') {
+      return "it's a tie";
+      }
+      }
+    }
+    console.log(game('rock', computerChoice));
+
   
   
   
@@ -178,9 +223,10 @@ console.log(multiply(2, 2));
   3. Return the number of miles
   */
   
-  function miles(/*add your code here*/){
-    /*add your code here*/
+  function miles(kilometers){
+    return kilometers / 1.609;
   }
+  console.log(miles(100));
   
   
   
@@ -192,9 +238,10 @@ console.log(multiply(2, 2));
   3. Return number of feet
   */
   
-  function feet(/*add your code here*/){
-    /*add your code here*/
+  function feet(centimeters) {
+    return centimeters / 30.48;
   }
+  console.log(feet(21))
   
   
   
@@ -208,10 +255,12 @@ console.log(multiply(2, 2));
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
   */
   
-  function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+  function annoyingSong(number){
+    for (i = number; i >= 1; i--) {
+      return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+    }
   }
-  
+  console.log(annoyingSong(7));
   
   /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
   
@@ -228,10 +277,20 @@ console.log(multiply(2, 2));
    below should return 'you got an F'
   */
   
-  function grade(/*Your Code here */){
-  /*Your Code here */
+  function grade(score){
+    if (score >= 90 && score <= 100) {
+      return 'you got an A';
+    } else if (score >= 80 && score <= 89) {
+      return 'you got a B';
+    } else if (score >= 70 && score <= 79) {
+      return 'you got a C';
+    } else if (score >= 60 && score <= 69) {
+      return 'you got a D';
+    } else if (score < 60) {
+      return 'you got an F';
+    }
   }
-  
+  console.log(grade(86));
   
   
   /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -246,10 +305,23 @@ console.log(multiply(2, 2));
   HINT - try looking up the .includes() method
   */
   
+  const vowels = ['a', 'e', 'i','o', 'u']
+  let count = 0;
+  function vowelCounter(word) {
+    let vowelCount = 0;
+    let word2 = word.toLowerCase();
+    for (i = 0; i < word2.length; i++) {
+      for (v = 0; v < vowels.length; v++ ) {
+        if (word2[i] === vowels[v]) {
+          count++;
+        }
+      }
+
+    }
+    return count;
   
-  function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-  }
+    }
+  console.log(vowelCounter('KEVIN'));
   
   
   
