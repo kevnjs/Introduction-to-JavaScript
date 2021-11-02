@@ -308,7 +308,6 @@ console.log(multiply(2, 2));
   const vowels = ['a', 'e', 'i','o', 'u']
   let count = 0;
   function vowelCounter(word) {
-    let vowelCount = 0;
     let word2 = word.toLowerCase();
     for (i = 0; i < word2.length; i++) {
       for (v = 0; v < vowels.length; v++ ) {
@@ -321,7 +320,7 @@ console.log(multiply(2, 2));
     return count;
   
     }
-  console.log(vowelCounter('KEVIN'));
+  console.log(vowelCounter('KEVINSUN'));
   
   
   
